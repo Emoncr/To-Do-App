@@ -1,0 +1,131 @@
+.todo {
+  /* background: #ffa801; */
+  background: #eeeeee;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px 30px 40px 30px;
+  border-radius: 5px;
+}
+.form_el {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form_el input {
+  max-width: 100% !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #e8edf3;
+}
+
+.form_el input:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.form_el .submit_button {
+  max-width: 100% !important;
+  margin-left: 10px;
+}
+.submit_button {
+  background-color: #333333 !important;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.submit_button:hover {
+  background-color: #33333380 !important;
+}
+.submit_button:focus {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.divider {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 5px;
+  border-radius: 5px;
+}
+
+.error_text {
+  animation: errorAnimation 2s ease 0s 1 normal forwards;
+}
+
+.Incomplete_task {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.Incomplete_task::-webkit-scrollbar {
+  display: none;
+}
+
+.Incomplete_task {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.complate_task {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.complate_task::-webkit-scrollbar {
+  display: none;
+}
+
+.complate_task {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes errorAnimation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60% {
+    transform: translateX(10px);
+  }
+
+  80% {
+    transform: translateX(8px);
+  }
+
+  90% {
+    transform: translateX(-8px);
+  }
+}
+@media (max-width: 768px) {
+  .form_el {
+    flex-direction: column;
+  }
+  .submit_button {
+    width: 100%;
+    margin-left: 0 !important;
+    margin-top: 10px;
+  }
+  .taskContainer {
+    flex-direction: column;
+  }
+  .divider {
+    width: 100%;
+    height: 2px;
+    margin-top: 10px;
+  }
+  .complate_task {
+    max-height: 100%;
+  }
+  .Incomplete_task {
+    max-height: 100%;
+  }
+}
