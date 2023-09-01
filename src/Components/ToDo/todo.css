@@ -1,7 +1,7 @@
 .todo {
   /* background: #ffa801; */
   background: #eeeeee;
-  max-width: 700px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 20px 30px 40px 30px;
   border-radius: 5px;
@@ -77,6 +77,12 @@
 .complate_task {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+.task_container {
+  width: 100% !important;
+  height: 200px;
+  padding: 10px;
 }
 
 @keyframes errorAnimation {

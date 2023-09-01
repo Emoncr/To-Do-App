@@ -2,12 +2,16 @@
   padding: 5px 10px;
   border: 1px solid #3d3d3d;
   border-radius: 5px;
+  background: #eeeeee;
+  max-width:400px;
+  margin-left:auto;
+  margin-right:auto;
 }
 .task_list_item:not(:first-child) {
   margin-top: 10px;
 }
 .complate_task .task_list_item {
-  background-color: #3ae374;
+  background-color: #32cd32;
   color: #000;
 }
 .task_list_item_inner {
@@ -18,4 +22,20 @@
 .icon_delete {
   margin-left: 8px;
   margin-bottom: 1px;
+}
+.task_content {
+  display: flex;
+  align-items: center;
+}
+.task_content p {
+  margin-left: 10px !important;
+}
+.task_list_item .drag_icon {
+  transition: 0.3s ease;
+}
+.task_list_item:hover .drag_icon {
+  color: red;
+}
+.complate_task .task_list_item:hover .drag_icon {
+  color: #fff;
 }
